@@ -1,0 +1,21 @@
+<div ng-controller="HomeController">
+	<table id="wrapper">
+         <tr>
+            <td>
+               <section class="container">
+                  <div class="login">
+                     <img id ="logo" ng-click="Home()" src="../images/logo.png">
+                     <h1>Registro de usuarios</h1>
+                     <form method="post" action="index.html">
+                        <input type="text" value="" placeholder="Nombre" ng-model="user.name">
+                        <input type="text" value="" placeholder="Correo electrónico" ng-model="user.email">
+                        <input type="text" value="" placeholder="Teléfono" ng-model="user.number">
+                        <input type="password" value="" placeholder="Contraseña" ng-model="user.password">
+                        <input type="button" class="btn btn-primary" value="Registrar" ng-click="register()">
+                     </form>
+                  </div>
+               </section>
+            </td>
+         </tr>
+      </table>
+</div>

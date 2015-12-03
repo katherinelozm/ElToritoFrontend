@@ -1,24 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="UTF-8">
-    <title>Restaurant</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css" media="screen" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style-portfolio.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <script language="javascript" src="js/jquery-1.11.3.js" type="text/javascript"></script>
-    <script language="javascript" src="js/linkEvents.js" type="text/javascript"></script>
-</head>
-
-<body>
-
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<nav ng-controller="HomeController" class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="row">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -29,22 +9,22 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <img id ="logo" src="images/logo.png">
+                    <a class="navbar-brand" href="#"><img id ="logo" src="images/logo.png"></a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav main-nav  clear navbar-right ">
+                    <ul ng-controller="HomeController" class="nav navbar-nav main-nav  clear navbar-right ">
                         <li><a class="color_animation" href="#top">HOME</a></li>
                         <li><a class="color_animation" href="#story">SOBRE NOSOTROS</a></li>
-                        <li><a id ="loginLink" class="color_animation" href="login.html">INCIAR SESION</a></li>
+                        <li><a id ="loginLink" class="color_animation" ng-click="Login()">INCIAR SESION</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div>
         </div><!-- /.container-fluid -->
     </nav>
 
-    <div id="top" class="starter_container bg">
+    <div id="top" class="starter_container">
         <div class="follow_container">
             <div class="col-md-6 col-md-offset-3">
                 <h2 class="top-title"> El Torito</h2>
@@ -56,8 +36,8 @@
 
     <!-- ============ About Us ============= -->
 
-    <section id="story" class="description_content">
-        <div class="text-content container">
+    <section id="story" class="description_content container">
+        <div class="text-content">
             <div class="col-md-6">
                 <h1>Sobre Nosotros</h1>
                 <div class="fa fa-cutlery fa-2x"></div>
@@ -65,11 +45,11 @@
             </div>
             <div class="col-md-6">
                 <div class="img-section">
-                   <img src="images/caprichoso.JPG" width="250" height="220">
-                   <img src="images/trozo.JPG" width="250" height="220">
+                   <img src="../images/caprichoso.JPG" width="250" height="220">
+                   <img src="../images/trozo.JPG" width="250" height="220">
                    <div class="img-section-space"></div>
-                   <img src="images/churrasco.PNG"  width="250" height="220">
-                   <img src="images/pescado.jpg"  width="250" height="220">
+                   <img src="../images/churrasco.PNG"  width="250" height="220">
+                   <img src="../images/pescado.jpg"  width="250" height="220">
                </div>
            </div>
        </div>
@@ -83,7 +63,7 @@
             <span class="social_heading">SÍGUENOS</span>
             <ul class="social_icons">
                 <li><a class="icon-twitter color_animation" href="https://twitter.com/resttorito" target="_blank"></a></li>
-                <li><a class="icon-facebook color_animation" href="https://www.facebook.com/ParrilladayRestauranteElTorito" target="_blank"></a></li>
+                <li><a class="icon-facebook color_animation" href="https://www.facebook.com/resttorito" target="_blank"></a></li>
                 <li><a class="icon-instagram color_animation" href="https://www.instagram.com/resttorito/" target="_blank"></a></li>
                 <li><a class="icon-mail color_animation" href="mailto:resttorito@yahoo.com" target="_blank"></a></li>
             </ul>
@@ -93,16 +73,14 @@
             <span class="social_info"><a class="color_animation">(+504) 2772-7113</a></span>
         </div>
     </div>
-</section>
+  </section>
 
 
-<!-- ============ Footer Section  ============= -->
+   <!-- ============ Footer Section  ============= -->
 
-<footer class="sub_footer">
-    <div class="container">
-        <div class="col-md-4"><p class="sub-footer-text text-center"><a href="#top"><b>REGRESAR AL INICIO</b></a></p></div>
-    </div>
-</footer>
-
-</body>
-</html>
+  <footer class="sub_footer">
+      <div class="container">
+          <div class="col-md-4"><p class="sub-footer-text text-center"><a href="#top">REGRESAR AL INICIO</a></p></div>
+      </div>
+  </footer>
+</div>
