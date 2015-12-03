@@ -1,0 +1,16 @@
+<div ng-controller="HomeController">
+	<section id = "wrapper">
+      <div class="login">
+         <img id ="logo" ng-click="Home()" src="../images/logo.png">
+         <h1>Iniciar Sesión</h1>
+         <form method="post" action="index.html">
+            <input type="text" name="login" value="" placeholder="Correo electrónico" ng-model="user.email">
+            <input type="password" name="password" value="" placeholder="Contraseña" ng-model="user.password">
+            <input type="button" class="btn btn-primary" name="commit" value="Iniciar" ng-click="login(user)">
+         </form>
+      </div>
+      <div class="login-help">
+         <p>¿Aún no eres un usario? <a ng-click="Register()">Regístrate</a></p>
+      </div>
+   </section>
+</div>
