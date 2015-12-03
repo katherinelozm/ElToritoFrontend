@@ -16,6 +16,7 @@ angular.module('ElTorito.Controllers')
         HomeService.Login(user).then(function(response){
           $sessionStorage.currentUser = response.data;
           $scope.user = {};
+          $state.go('client')
         }).catch(function(err){
           alert(err.data.error + " " + err.data.message);
         });
@@ -26,6 +27,7 @@ angular.module('ElTorito.Controllers')
         HomeService.Register(user).then(function(response){
           alert('Registered in correctly!');
           $scope.login({email: user.email, password: user.password});
+          $state.go('client')
         }).catch(function(err){
           console.log(err);
           alert(err.data.error + " " + err.data.message);
@@ -43,7 +45,11 @@ angular.module('ElTorito.Controllers')
       $scope.Login = function(){
         $state.go('login')
       }
-      
+
+      $scope.Client = function(){
+        $state.go('client')
+      }
+
       $scope.isAdmin = function(){
         return $sessionStorage.currentUser && $sessionStorage.currentUser.scope.indexOf('admin') > -1;
       }

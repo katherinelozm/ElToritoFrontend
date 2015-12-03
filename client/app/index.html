@@ -16,6 +16,14 @@
     <script language="javascript" src="scripts/jquery-1.11.3.js" type="text/javascript"></script>
     <script language="javascript" src="scripts/linkEvents.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="styles/login.css">
+    <link href="styles/slider/js-image-slider.css" rel="stylesheet" type="text/css" />
+    <script src="scripts/slider/js-image-slider.js" type="text/javascript"></script>
+    <link href="styles/slider/tooltip.css" rel="stylesheet" type="text/css" />
+    <script src="scripts/slider/tooltip.js" type="text/javascript"></script>
+    <link href="styles/slider/generic.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        imageSlider.thumbnailPreview(function (thumbIndex) { return "<img src='imagesSlider/thumb" + (thumbIndex + 1) + ".jpg' style='width:100px;height:60px;' />"; });
+    </script>
   </head>
 
   <body ng-app="ElTorito">  
