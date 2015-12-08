@@ -1,7 +1,7 @@
 angular.module('ElTorito.Services').factory('HomeService', ['$http',
 	function($http){
 		$http.defaults.withCredentials = true;
-		var baseUrl = 'https://eltoritofrontend.herokuapp.com/';
+		var baseUrl = 'https://eltoritobackend.herokuapp.com/';
 		return {
 				GetUsers: function(){
 					return $http.get(baseUrl + "v1/users");
