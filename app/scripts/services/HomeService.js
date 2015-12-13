@@ -1,7 +1,8 @@
 angular.module('ElTorito.Services').factory('HomeService', ['$http',
 	function($http){
 		$http.defaults.withCredentials = true;
-		var baseUrl = 'https://eltoritobackend.herokuapp.com/';
+		var baseUrl = 'http://Dellilah:8000';
+
 		return {
 				GetUsers: function(){
 					return $http.get(baseUrl + "v1/users");
@@ -14,6 +15,12 @@ angular.module('ElTorito.Services').factory('HomeService', ['$http',
 				},
 		        Register: function(payload){
 		          return $http.post(baseUrl + "v1/register", payload);
+		        }
+		        Quote : function(payload) {
+		        	return $http.post(baseUrl + "v1/quoteRequest", payload);
+		        }
+		        Reservation : function(payload) {
+		        	return $http.post(baseUrl + "v1/reservationRequest", payload);
 		        }
 	    };
 }]);
