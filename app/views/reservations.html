@@ -1,0 +1,82 @@
+<div ng-controller="HomeController">
+   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+         <div class="row">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+            </div>
+            <div style="align=center;"class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+               <ul class="nav navbar-nav main-nav  clear navbar-right ">
+                  <li><a class="color_animation" href="reservaciones.html">RESERVACIONES</a></li>
+                  <li><a ng-click="Home()" class="color_animation" href="index.html"><img id ="logo" src="images/logo.png"></a></li>
+                  <li><a id ="loginLink" class="color_animation" href="cotizaciones.html">COTIZACIONES</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </nav>
+   <!-- ============ Form  ============= -->
+   <br><br><br>
+   <section>
+      <div class="container contentCliente">
+         <div class="login col-md-6 col-md-offset-3">
+            <h2 class="top-title2">Reservación</h2>
+            <br><br>
+            <form method="post" action="index.html">
+               <p>Nombre del cliente: <input type="text" name="nombre" value="" placeholder="Ej. María Lopez" ng-model="reservation.client"></p>
+               <br>
+               <p>Empresa: <input type="text" name="empresa" value="" placeholder="Ej. Grupo Leones" ng-model="reservation.company"></p>
+               <br>
+               <p>Cantidad de personas: <input type="number" min="2" max="100" step="1" value="2" ng-model="reservation.client" ng-model="reservation.quantity"></p>
+               <br>
+               <p>Fecha: <input type="date" name="fecha" ng-model="reservation.day"></p>
+               <br>
+               <p>Hora: <input type="time" min="11:00" max="20:00" name="time" value="11:00" ng-model="reservation.hour"></p>
+               <br>
+               <p>
+                  Tipo de evento:
+                  <input type="radio" name="tipo" value="Boda" ng-model="reservation.eventType"> Boda&nbsp;&nbsp;&nbsp;
+                  <input type="radio" name="tipo" value="Charla" ng-model="reservation.eventType"> Charla&nbsp;&nbsp;&nbsp;
+                  <input type="radio" name="tipo" value="Cumpleaños" ng-model="reservation.eventType"> Cumpleaños&nbsp;&nbsp;&nbsp;
+                  <input type="radio" name="tipo" value="Almuerzo/Cena" ng-model="reservation.eventType"> Almuerzo/Cena&nbsp;&nbsp;&nbsp;
+                  <input type="radio" name="tipo" value="Otro" ng-model="reservation.eventType"> Otro&nbsp;&nbsp;&nbsp;
+               </p>
+               <br>
+               <p>
+                  Localidad:
+                  <input type="radio" name="localidad" value="Adentro" ng-model="reservation.locality"> Adentro&nbsp;&nbsp;&nbsp;
+                  <input type="radio" name="localidad" value="Afuera" ng-model="reservation.locality"> Afuera&nbsp;&nbsp;&nbsp;
+               </p>
+               <br>
+               <p>Comentarios adicionales: <br></p>
+               <textarea rows="4" cols="50" placeholder="Ingrese sus comentarios adicionales. Por ejemplo: Necesitamos el salón solo para nosotros." ng-model="reservation.comments"></textarea>
+               <br><br>
+               <input type="button" class="btn btn-primary" name="commit" value="Enviar reservación" ng-click="reservationRequest()">
+            </form>
+         </div>
+      </div>
+   </section>
+   <!-- ============ Social Section  ============= -->
+   <section class="social_connect">
+      <div class="text-content container">
+         <div class="col-md-6">
+            <span class="social_heading">SÍGUENOS</span>
+            <ul class="social_icons">
+               <li><a class="icon-twitter color_animation" href="https://twitter.com/resttorito" target="_blank"></a></li>
+               <li><a class="icon-facebook color_animation" href="https://www.facebook.com/ParrilladayRestauranteElTorito" target="_blank"></a></li>
+               <li><a class="icon-instagram color_animation" href="https://www.instagram.com/resttorito/" target="_blank"></a></li>
+               <li><a class="icon-mail color_animation" href="mailto:resttorito@yahoo.com" target="_blank"></a></li>
+            </ul>
+         </div>
+         <div class="col-md-4">
+            <span class="social_heading">TELÉFONO</span>
+            <span class="social_info"><a class="color_animation">(+504) 2772-7113</a></span>
+         </div>
+      </div>
+   </section>
+</div>
