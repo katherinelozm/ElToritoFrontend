@@ -26,4 +26,14 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
             templateUrl: '/views/client.html',
             controller: 'HomeController'
         });
+        .state('quoteClient', {
+            url: '/quoteClient',
+            templateUrl: '/views/quote.html',
+            controller: 'HomeController'
+        });
+        .state('reservationClient', {
+            url: '/reservationClient',
+            templateUrl: '/views/reservations.html',
+            controller: 'HomeController'
+        });
 }])

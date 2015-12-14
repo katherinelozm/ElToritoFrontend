@@ -97,6 +97,16 @@ angular.module('ElTorito.Controllers')
             $state.go('client')
         }
 
+        $scope.QuoteClient = function() {
+            $state.go('quoteClient')
+        }
+
+        $scope.ReservationClient = function() {
+            $state.go('reservationClient')
+        }
+
+
+
         $scope.isAdmin = function() {
             return $sessionStorage.currentUser && $sessionStorage.currentUser.scope.indexOf('admin') > -1;
         }
