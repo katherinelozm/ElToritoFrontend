@@ -53,9 +53,22 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
             templateUrl: '/views/reservationAdmin.html',
             controller: 'HomeController'
         });
+
+        .state('reservationView', {
+            url: '/reservationView',
+            templateUrl: '/views/reservationView.html',
+            controller: 'HomeController'
+        });
+
         .state('registerAdmin', {
             url: '/registerAdmin',
             templateUrl: '/views/newUser.html',
+            controller: 'HomeController'
+        });
+
+        .state('userView', {
+            url: '/userView',
+            templateUrl: '/views/usersView.html',
             controller: 'HomeController'
         });
 

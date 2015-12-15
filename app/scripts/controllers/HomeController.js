@@ -1,6 +1,8 @@
 angular.module('ElTorito.Controllers')
     .controller('HomeController', ['$scope', '$rootScope', '$sessionStorage', 'HomeService', '$state', function($scope, $rootScope, $sessionStorage, HomeService, $state) {
         $scope.user = {};
+        $scope.quote = {};
+        $scope.reservation = {};
         $scope.$sessionStorage = $sessionStorage;
 
         $scope.logout = function() {
@@ -134,7 +136,7 @@ angular.module('ElTorito.Controllers')
             $state.go('login')
         }
 
-            //Client
+        //Client
         $scope.Client = function() {
             $state.go('client')
         }
@@ -147,7 +149,7 @@ angular.module('ElTorito.Controllers')
             $state.go('reservationClient')
         }
 
-            //Admin
+        //Admin
         $scope.Admin = function() {
             $state.go('administrador')
         }
@@ -160,14 +162,57 @@ angular.module('ElTorito.Controllers')
             $state.go('reservationAdmin')
         }
 
+        $scope.ReservationView = function() {
+            $state.go('reservationView')
+        }
+
         $scope.RegisterAdmin = function() {
             $state.go('registerAdmin')
+        }
+
+        $scope.UserView = function() {
+            $state.go('userView')
         }
 
         $scope.Reports = function() {
             $state.go('reports')
         }
 
+        $scope.getReservations = function() {
+            HomeService.GetReservations().then(function(response) {
+                $scope.reservation = response.data;
+            }).catch(function(err) {
+                alert(err.data.error + " " + err.data.message)
+            });
+        }
+
+        $scope.postReservations = function() {
+                HomeService.PostReservations($scope.reservation).then(function(response) {
+                    alert("Posted");
+                    $scope.getReservations();
+                }).catch(function(err) {
+                    alert(err.data.error + " " + err.data.message);
+                });
+        }
+
+        $scope.getUsers2 = function() {
+            HomeService.GetUsers2().then(function(response) {
+                $scope.user = response.data;
+            }).catch(function(err) {
+                alert(err.data.error + " " + err.data.message)
+            });
+        }
+
+        $scope.postUsers = function() {
+            HomeService.PostUsers($scope.user).then(function(response) {
+                alert("Posted");
+                $scope.getUsers2();
+            }).catch(function(err) {
+                alert(err.data.error + " " + err.data.message);
+            });
+        }
+           
+            //
         $scope.isAdmin = function() {
             return $sessionStorage.currentUser && $sessionStorage.currentUser.scope.indexOf('admin') > -1;
         }
@@ -179,9 +224,9 @@ angular.module('ElTorito.Controllers')
         var app = angular.module('plunker', []);
 
         app.controller('MainCtrl', function($scope) {
-        $scope.divShow = "graph1"
-        $scope.show = function(arg) {
-        $scope.divShow = arg;
-        }
-});
+            $scope.divShow = "graph1"
+            $scope.show = function(arg) {
+                $scope.divShow = arg;
+            }
+        });
     }]);

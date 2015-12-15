@@ -29,6 +29,8 @@
          <div class="login col-md-6 col-md-offset-3">
             <h2 class="top-title2">Reservación</h2>
             <br><br>
+            <input type="button" class="btn btn-primary" name="commit" value="Ver reservaciones" ng-click="ReservationView()">
+            <br><br>
             <form method="post" action="index.html">
                <p>Nombre del cliente: <input type="text" name="nombre" value="" placeholder="Ej. María Lopez" ng-model="reservation.client"></p>
                <br>
