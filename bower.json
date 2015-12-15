@@ -1,14 +1,14 @@
 {
-  "name": "angular-sacffold",
+  "name": "ElTorito",
   "authors": [
-    "Viktor Zavala <viktor@acklenavenue.com>"
+    "Katherine Lozano <katherinelozano@unitec.edu"
   ],
-  "description": "AngularJS scaffold app with Hapi server serving it",
+  "description": "El Torito app with Hapi server serving it",
   "main": "index.html",
   "moduleType": [],
   "keywords": [
-    "Angular",
-    "Scaffold",
+    "El",
+    "Torito",
     "Hapi",
     "Bootstrap"
   ],
