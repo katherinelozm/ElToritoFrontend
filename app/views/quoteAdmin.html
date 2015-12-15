@@ -24,6 +24,41 @@
    </nav>
    <section>
       <div class="container">
+          <table>
+            <tr>
+               <th>Cliente</th>
+               <th>Empresa</th>
+               <th>Correo</th>
+               <th>Cantidad personas</th>
+               <th>Día</th>
+               <th>Hora</th>
+               <th>Tipo</th>
+            </tr>
+            <tr ng-repeat="quote in quotes">
+               <td>
+                  {{quote.name}}
+               </td>
+               <td>
+                  {{quote.company}}
+               </td>
+               <td>
+                  {{quote.email}}
+               </td>
+               <td>
+                  {{quote.quantity}}
+               </td>
+               <td>
+                  {{quote.day}}
+               </td>
+               <td>
+                  {{quote.hour}}
+               </td>
+               <td>
+                  {{quote.eventType}}
+               </td>
+               <td>
+                <a href="mailto:{{quote.email}}" target="_blank">Enviar</a>
+               </td>
       </div>
    </section>
 </div>

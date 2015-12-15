@@ -29,6 +29,12 @@ angular.module('ElTorito.Services').factory('HomeService', ['$http',
 				PostReservations: function(payload){
 					return $http.post("v1/reservations", payload);
 				},
+				GetQuotes: function(){
+					return $http.get("v1/quotes");
+				},
+				PostQuotes: function(payload){
+					return $http.post("v1/quotes", payload);
+				},
 				GetUsers2: function(){
 					return $http.get("v1/users");
 				},

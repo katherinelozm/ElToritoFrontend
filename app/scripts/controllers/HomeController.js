@@ -195,6 +195,23 @@ angular.module('ElTorito.Controllers')
                 });
         }
 
+        $scope.getQuotes = function() {
+            HomeService.GetQuotes().then(function(response) {
+                $scope.reservation = response.data;
+            }).catch(function(err) {
+                alert(err.data.error + " " + err.data.message)
+            });
+        }
+
+        $scope.postQuotes = function() {
+                HomeService.PostQuotes($scope.reservation).then(function(response) {
+                    alert("Posted");
+                    $scope.getQuotes();
+                }).catch(function(err) {
+                    alert(err.data.error + " " + err.data.message);
+                });
+        }
+
         $scope.getUsers2 = function() {
             HomeService.GetUsers2().then(function(response) {
                 $scope.user = response.data;
