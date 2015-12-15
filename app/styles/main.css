@@ -900,17 +900,135 @@ MEDIA QUERIE DESKTOP
     }
 }
 
-table {
-    min-width: 100%;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    
+#tablesposition {
+    margin-top: 15%;
+    margin-left: 10%;
+    width: 80%;
+    border-style: solid;
+    border-color: black;
 }
-table tr {
-    min-width: 100%;
-    background-color: #EDEDED;
-    vertical-align: middle;
+
+tr {
+    margin: 20px;
 }
-table td {
-    width: 290em;   
+
+td {
+    margin: 40px;
+    width: 70px;
+    height: 70px;
+}
+
+.mesa4 {
+    width: 160px;
+    height: 160px;
+}
+
+.mesa6_8_10 {
+    width: 320px;
+    height: 160px;
+    margin: 0;
+}
+
+.mesa6_8_10v {
+    width: 160px;
+    height: 320px;
+    margin-left: 0;
+}
+
+.empty {
+    width: 20px;
+}
+
+.verticalborder {
+    border-right-style: solid;
+    border-right-color: black;
+}
+
+.horizontalborder {
+    border-bottom-style: solid;
+    border-bottom-color: black;
+}
+
+.menucategories {
+    width: 260px;
+    height: 260px;
+    background-color: black;
+    border-radius: 50px;
+}
+
+#tablecategories {
+    margin-left: 18%;
+    margin-top: 10%;
+    border-spacing: 10px;
+    border-collapse: separate;
+}
+
+a {
+    color: white;
+    font-size: 30px;
+}
+
+.table-fill {
+  background: white;
+  border-radius:3px;
+  border-collapse: collapse;
+  height: 320px;
+  margin: auto;
+  margin-top: 100px;
+  max-width: 600px;
+  padding:5px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: float 5s infinite;
+}
+ 
+th {
+  color:#D5DDE5;
+  background:#1b1e24;
+  border-bottom:4px solid #9ea7af;
+  font-size:23px;
+  font-weight: 300;
+  padding:24px;
+  text-align:center;
+  vertical-align:middle;
+}
+
+th:first-child {
+  border-top-left-radius:3px;
+}
+ 
+th:last-child {
+  border-top-right-radius:3px;
+  border-right:none;
+}
+  
+tr {
+  color:#666B85;
+  font-size:16px;
+  font-weight:normal;
+}
+
+.row {
+  border-top: 1px solid #C1C3D1;
+  border-bottom-: 1px solid #C1C3D1;
+  color:#666B85;
+  font-size:16px;
+  font-weight:normal;
+  width: 100%;
+}
+ 
+.row:hover td {
+  background:#4E5066;
+  color:#FFFFFF;
+  border-top: 1px solid #22262e;
+  border-bottom: 1px solid #22262e;
+}
+ 
+td {
+  background:#FFFFFF;
+  padding:20px;
+  text-align:center;
+  vertical-align:middle;
+  font-weight:300;
+  font-size:18px;
 }
