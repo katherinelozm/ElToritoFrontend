@@ -899,18 +899,3 @@ MEDIA QUERIE DESKTOP
         font-size: 30px;
     }
 }
-
-table {
-    min-width: 100%;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    
-}
-table tr {
-    min-width: 100%;
-    background-color: #EDEDED;
-    vertical-align: middle;
-}
-table td {
-    width: 290em;   
-}
