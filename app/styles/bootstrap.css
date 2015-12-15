@@ -2588,6 +2588,27 @@ select[multiple].input-lg {
   border: 1px solid transparent;
   border-radius: 4px;
 }
+.btn2 {
+  display: inline-block;
+  padding: 6px 12px;
+  margin: 5% 5% 0% 0%;
+  font-size: 25px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  width: 227.703px;
+  height: 49px;
+}
 .btn:focus,
 .btn:active:focus,
 .btn.active:focus {

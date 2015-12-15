@@ -921,3 +921,16 @@ table td {
 .indent{
     text-indent: 120px;
 }
+
+
+table.reportTable {
+    min-width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5px;
+
+}
+
+tr.report {
+     background-color: #FFFFFF;
+
+}

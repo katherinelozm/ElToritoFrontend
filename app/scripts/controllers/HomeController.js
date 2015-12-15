@@ -43,6 +43,26 @@ angular.module('ElTorito.Controllers')
             });
         }
 
+        $scope.registerAdmin = function() {
+            var user = {
+                name: $scope.user.userName,
+                email: $scope.user.email,
+                number: $scope.user.number,
+                password: $scope.user.password,
+                scope: $scope.user.userType
+            };
+            HomeService.Register(user).then(function(response) {
+                alert('Registered in correctly!');
+                $scope.login({
+                    email: user.email,
+                    password: user.password
+                });
+            }).catch(function(err) {
+                console.log(err);
+                alert(err.data.error + " " + err.data.message);
+            });
+        }
+
         $scope.quoteRequest = function() {
             var quote = {
                 client: $scope.quote.client,
@@ -81,6 +101,27 @@ angular.module('ElTorito.Controllers')
 
         }
 
+        $scope.reservationRequest2 = function() {
+            var reservation = {
+                client: $scope.reservation.client,
+                company: $scope.reservation.company,
+                email: $scope.reservation.email,
+                quantity: $scope.reservation.quantity,
+                day: $scope.reservation.day,
+                hour: $scope.reservation.hour,
+                eventType: $scope.reservation.eventType,
+                locality: $scope.reservation.locality,
+                comments: $scope.reservation.comments
+            };
+            HomeService.Reservation(reservation).then(function(response) {
+                alert('Reservation succesfully registered!');
+            }).catch(function(err) {
+                console.log(err);
+                alert(err.data.error + " " + err.data.message);
+            });
+
+        }
+
         $scope.Home = function() {
             $state.go('home')
         }
@@ -93,8 +134,38 @@ angular.module('ElTorito.Controllers')
             $state.go('login')
         }
 
+            //Client
         $scope.Client = function() {
             $state.go('client')
+        }
+
+        $scope.QuoteClient = function() {
+            $state.go('quoteClient')
+        }
+
+        $scope.ReservationClient = function() {
+            $state.go('reservationClient')
+        }
+
+            //Admin
+        $scope.Admin = function() {
+            $state.go('administrador')
+        }
+
+        $scope.QuoteAdmin = function() {
+            $state.go('quoteAdmin')
+        }
+
+        $scope.ReservationAdmin = function() {
+            $state.go('reservationAdmin')
+        }
+
+        $scope.RegisterAdmin = function() {
+            $state.go('registerAdmin')
+        }
+
+        $scope.Reports = function() {
+            $state.go('reports')
         }
 
         $scope.isAdmin = function() {
@@ -104,4 +175,13 @@ angular.module('ElTorito.Controllers')
         $scope.isClient = function() {
             return $sessionStorage.currentUser && $sessionStorage.currentUser.scope.indexOf('client') > -1;
         }
+
+        var app = angular.module('plunker', []);
+
+        app.controller('MainCtrl', function($scope) {
+        $scope.divShow = "graph1"
+        $scope.show = function(arg) {
+        $scope.divShow = arg;
+        }
+});
     }]);

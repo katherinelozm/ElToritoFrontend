@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <title>Restaurante El Torito</title>
+ <!-- bower:css -->
+ <link rel="stylesheet" href="../bootstrap-css/css/bootstrap.min.css">
+ <!-- endinject -->
+ <link rel="stylesheet" href="../styles/normalize.css">
+ <link rel="stylesheet" href="../styles/main.css" media="screen" type="text/css">
+ <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+ <link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+ <link rel="stylesheet" href="../styles/bootstrap.css">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link href="styles/font-awesome.min.css" rel="stylesheet">
+ <script language="javascript" src="../scripts/jquery-1.11.3.js" type="text/javascript"></script>
+ <script language="javascript" src="../scripts/linkEvents.js" type="text/javascript"></script>
+ <link rel="stylesheet" type="text/css" href="../styles/login.css">
+ <link href="../styles/slider/js-image-slider.css" rel="stylesheet" type="text/css" />
+ <script src="../scripts/slider/js-image-slider.js" type="text/javascript"></script>
+ <link href="../styles/slider/tooltip.css" rel="stylesheet" type="text/css" />
+ <script src="../scripts/slider/tooltip.js" type="text/javascript"></script>
+ <link href="../styles/slider/generic.css" rel="stylesheet" type="text/css" />
+ <script type="text/javascript">
+  imageSlider.thumbnailPreview(function (thumbIndex) { return "<img src='imagesSlider/thumb" + (thumbIndex + 1) + ".jpg' style='width:100px;height:60px;' />"; });
+</script>
+</head>
+
+<body> 
+
+
+
+   <div ng-controller="HomeController">
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+         <div class="container">
+            <div class="row">
+               <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                     <span class="sr-only">Toggle navigation</span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                  </button>
+               </div>
+               <div style="align=center;"class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav main-nav  clear navbar-right ">
+                     <li><a ng-click="Admin()" class="color_animation">INICIO</a></li>
+                     <li><a ng-click="ReservationAdmin()" class="color_animation">RESERVACIONES</a></li>
+                     <li><img id ="logo" src="images/logo.png"></a></li>
+                     <li><a ng-click="QuoteAdmin()" class="color_animation">COTIZACIONES</a></li>
+                     <li><a ng-click="RegisterAdmin()" class="color_animation">USUARIOS</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </nav>
+      <!-- ============ Reports  ============= -->
+      <br><br><br>
+      <section>
+         <div class="container">
+            <br><br><br>
+            <h2 class="top-title2">Reportes</h2>
+            <table class="reportTable">
+               <tr class="report">
+                  <td><input id="chart1" type="button" class="top-title2 btn2 btn-primary" value="Entradas" ng-click="show('graph1')"></td>
+                  <td><input id="chart2" type="button" class="top-title2 btn2 btn-primary" value="Platos Internacionales" ng-click="show('graph2')"></td>
+                  <td><input id="chart3" type="button" class="top-title2 btn2 btn-primary" value="De la Parilla" ng-click="show('graph3')"></td>
+               </tr>
+               <tr class="report">
+                  <td><input id="chart4" type="button" class="top-title2 btn2 btn-primary" value="Pollo y Pescado" ng-click="show('graph4')"></td>
+                  <td><input id="chart5" type="button" class="top-title2 btn2 btn-primary" value="Camarones" ng-click="show('graph5')"></td>
+                  <td><input id="chart6" type="button" class="top-title2 btn2 btn-primary" value="Bebidas" ng-click="show('graph6')"></td>
+               </tr>
+
+            </table>
+            <div ng-show="divShow == 'graph1'">
+            
+               
+            </div>
+            <div ng-show="divShow == 'graph2'">
+               
+            </div>
+            <div ng-show="divShow == 'graph3'">
+               
+            </div>
+            <div ng-show="divShow == 'graph4'">
+               
+            </div>
+            <div ng-show="divShow == 'graph5'">
+               
+            </div>
+            <div ng-show="divShow == 'graph6'">
+               
+            </div>
+         </div>
+      </section>
+   </div>
+</body>
+</html>
