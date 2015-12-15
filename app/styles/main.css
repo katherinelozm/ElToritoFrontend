@@ -148,6 +148,9 @@ h1, h2, p, span, a {
     margin: 0;
     padding: 0;
 }
+.contentCliente {
+    margin: 5% 10% 5% 10%;
+}
 
 .limit {
     max-width: 1200px;
@@ -257,12 +260,12 @@ INTRO CONTAINER
     font-style: italic; 
     text-transform: capitalize;
 }
-.top-titleCLI{
-    margin-top: 50px;
-    color: white;
+.top-title2{
+    color: black;
     font-family: 'Playball', cursive;
-    font-size: 120px;
+    font-size: 50px;
     font-weight: 400;
+    text-align: center;
  }
 .second-titleCLI {
     font-weight: lighter; 
@@ -682,7 +685,7 @@ MEDIA QUERIES TABLET
         text-align: center;
     }
     .logo {
-        display: none;
+        text-align: center;
     }
     .main-nav {
         padding: 0;
@@ -913,4 +916,8 @@ table tr {
 }
 table td {
     width: 290em;   
+}
+
+.indent{
+    text-indent: 120px;
 }
